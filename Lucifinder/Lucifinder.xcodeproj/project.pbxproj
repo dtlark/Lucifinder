@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E735BB2253BAF9A00526002 /* LuciBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E735BB1253BAF9A00526002 /* LuciBrand.swift */; };
+		1E735BB5253BEC4300526002 /* LuciHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E735BB4253BEC4300526002 /* LuciHome.swift */; };
+		1EABA9512542434200B9CDD0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABA9502542434200B9CDD0 /* Coordinator.swift */; };
+		1EB2D39A2544527C008851A2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D3992544527C008851A2 /* ImagePicker.swift */; };
+		1EB2D39D2544620E008851A2 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D39C2544620E008851A2 /* ImagePickerView.swift */; };
+		1EE7C03B25390ADF000C8859 /* LucifinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7C03A25390ADF000C8859 /* LucifinderApp.swift */; };
+		1EE7C03D25390ADF000C8859 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7C03C25390ADF000C8859 /* ContentView.swift */; };
+		1EE7C03F25390AE1000C8859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EE7C03E25390AE1000C8859 /* Assets.xcassets */; };
+		1EE7C04225390AE1000C8859 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EE7C04125390AE1000C8859 /* Preview Assets.xcassets */; };
+		1EF6090225583C2000281C99 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF6090125583C2000281C99 /* SwiftSpinner.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E735BB1253BAF9A00526002 /* LuciBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuciBrand.swift; sourceTree = "<group>"; };
+		1E735BB4253BEC4300526002 /* LuciHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuciHome.swift; sourceTree = "<group>"; };
+		1EABA9502542434200B9CDD0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1EB2D3992544527C008851A2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1EB2D39C2544620E008851A2 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		1EE7C03725390ADF000C8859 /* Lucifinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lucifinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EE7C03A25390ADF000C8859 /* LucifinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LucifinderApp.swift; sourceTree = "<group>"; };
+		1EE7C03C25390ADF000C8859 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1EE7C03E25390AE1000C8859 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1EE7C04125390AE1000C8859 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1EE7C04325390AE1000C8859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EF6090125583C2000281C99 /* SwiftSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EE7C03425390ADF000C8859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EE7C02E25390ADF000C8859 = {
+			isa = PBXGroup;
+			children = (
+				1EE7C03925390ADF000C8859 /* Lucifinder */,
+				1EE7C03825390ADF000C8859 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EE7C03825390ADF000C8859 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EE7C03725390ADF000C8859 /* Lucifinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EE7C03925390ADF000C8859 /* Lucifinder */ = {
+			isa = PBXGroup;
+			children = (
+				1EE7C03A25390ADF000C8859 /* LucifinderApp.swift */,
+				1EE7C03C25390ADF000C8859 /* ContentView.swift */,
+				1E735BB4253BEC4300526002 /* LuciHome.swift */,
+				1EB2D3992544527C008851A2 /* ImagePicker.swift */,
+				1EB2D39C2544620E008851A2 /* ImagePickerView.swift */,
+				1EF6090125583C2000281C99 /* SwiftSpinner.swift */,
+				1EABA9502542434200B9CDD0 /* Coordinator.swift */,
+				1E735BB1253BAF9A00526002 /* LuciBrand.swift */,
+				1EE7C03E25390AE1000C8859 /* Assets.xcassets */,
+				1EE7C04325390AE1000C8859 /* Info.plist */,
+				1EE7C04025390AE1000C8859 /* Preview Content */,
+			);
+			path = Lucifinder;
+			sourceTree = "<group>";
+		};
+		1EE7C04025390AE1000C8859 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1EE7C04125390AE1000C8859 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EE7C03625390ADF000C8859 /* Lucifinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EE7C04625390AE1000C8859 /* Build configuration list for PBXNativeTarget "Lucifinder" */;
+			buildPhases = (
+				1EE7C03325390ADF000C8859 /* Sources */,
+				1EE7C03425390ADF000C8859 /* Frameworks */,
+				1EE7C03525390ADF000C8859 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lucifinder;
+			productName = Lucifinder;
+			productReference = 1EE7C03725390ADF000C8859 /* Lucifinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EE7C02F25390ADF000C8859 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					1EE7C03625390ADF000C8859 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 1EE7C03225390ADF000C8859 /* Build configuration list for PBXProject "Lucifinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1EE7C02E25390ADF000C8859;
+			productRefGroup = 1EE7C03825390ADF000C8859 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EE7C03625390ADF000C8859 /* Lucifinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EE7C03525390ADF000C8859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EE7C04225390AE1000C8859 /* Preview Assets.xcassets in Resources */,
+				1EE7C03F25390AE1000C8859 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EE7C03325390ADF000C8859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EE7C03D25390ADF000C8859 /* ContentView.swift in Sources */,
+				1EF6090225583C2000281C99 /* SwiftSpinner.swift in Sources */,
+				1EABA9512542434200B9CDD0 /* Coordinator.swift in Sources */,
+				1EB2D39A2544527C008851A2 /* ImagePicker.swift in Sources */,
+				1EB2D39D2544620E008851A2 /* ImagePickerView.swift in Sources */,
+				1E735BB5253BEC4300526002 /* LuciHome.swift in Sources */,
+				1E735BB2253BAF9A00526002 /* LuciBrand.swift in Sources */,
+				1EE7C03B25390ADF000C8859 /* LucifinderApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1EE7C04425390AE1000C8859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1EE7C04525390AE1000C8859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EE7C04725390AE1000C8859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Lucifinder/Preview Content\"";
+				DEVELOPMENT_TEAM = 8Z75K4L4F2;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Lucifinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Lucifinder.Lucifinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1EE7C04825390AE1000C8859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Lucifinder/Preview Content\"";
+				DEVELOPMENT_TEAM = 8Z75K4L4F2;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Lucifinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Lucifinder.Lucifinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EE7C03225390ADF000C8859 /* Build configuration list for PBXProject "Lucifinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EE7C04425390AE1000C8859 /* Debug */,
+				1EE7C04525390AE1000C8859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EE7C04625390AE1000C8859 /* Build configuration list for PBXNativeTarget "Lucifinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EE7C04725390AE1000C8859 /* Debug */,
+				1EE7C04825390AE1000C8859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1EE7C02F25390ADF000C8859 /* Project object */;
+}

@@ -26,13 +26,12 @@ class ImageSaver: NSObject {
 
 struct ImagePickerView: View {
     @State private var image: Image?
-    @State private var filterIntensity = 0.5
     
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
-    @State private var currentFilter = CIFilter.sepiaTone()
     
     @State private var showAlert = false
+    @State private var luciFound = false
     
     var labelContainerView: UIView!
     
@@ -66,7 +65,14 @@ struct ImagePickerView: View {
             }
             .alert(isPresented: $showAlert) {
                 SwiftSpinner.hide()
-                return Alert(title: Text("Luciferin Detected!"), message: Text("Luciferin has been detected in the photo!"), dismissButton: .default(Text("Great!")))
+                if (luciFound)
+                {
+                    return Alert(title: Text("Luciferin Detected!"), message: Text("Luciferin has been detected in the photo!"), dismissButton: .default(Text("Great!")))
+                }
+                else
+                {
+                    return Alert(title: Text("No Luciferin Detected..."), message: Text("Luciferin has not been detected in this photo"), dismissButton: .default(Text("Okay")))
+                }
             }
             
         }
@@ -84,6 +90,7 @@ struct ImagePickerView: View {
         let height = Int(thisImage.size.height)
         var bytesPerRow = width * 4
         let imageData = UnsafeMutablePointer<Pixel>.allocate(capacity: width * height)
+        var spectrum:Bool = false
         
         guard let imageContext = CGContext(
             data: imageData,
@@ -104,7 +111,6 @@ struct ImagePickerView: View {
                 for x in 0..<width {
                     let index  = y * width + x
                     let pixel = pixels[index]
-                    var spectrum:Bool = false
                     if (pixel.green == 255 || pixel.green == 254) {
                         if (pixel.blue == 0) {
                             if (pixel.red == 163 || pixel.red == 162 || pixel.red == 164) {
@@ -172,7 +178,22 @@ struct ImagePickerView: View {
                             }
                         }
                     }
+                    //pixel within range has been detected, send alert notice
                     if (spectrum)
+                    {
+                        self.showAlert = true
+                        self.luciFound = true
+                    }
+                }
+                //end of pic processing, send alert notice
+                if (y == (height - 1))
+                {
+                    if (spectrum == true)
+                    {
+                        self.luciFound = true
+                        self.showAlert = true
+                    }
+                    else
                     {
                         self.showAlert = true
                     }
@@ -185,6 +206,7 @@ struct ImagePickerView: View {
         print(Int(width))
         print(Int(height))
         
+        //revert pixels back to image data and restore image
         colorSpace = CGColorSpaceCreateDeviceRGB()
         bitmapInfo = CGBitmapInfo.byteOrder32Big.rawValue
         bitmapInfo |= CGImageAlphaInfo.premultipliedLast.rawValue & CGBitmapInfo.alphaInfoMask.rawValue
@@ -206,14 +228,6 @@ struct ImagePickerView: View {
         if let cgimg = context.makeImage() {
             let uiImage = UIImage(cgImage: cgimg)
             image = Image(uiImage: uiImage)
-        }
-    }
-    
-    func delay(seconds: Double, completion: @escaping () -> ()) {
-        let popTime = DispatchTime.now() + Double(Int64( Double(NSEC_PER_SEC) * seconds )) / Double(NSEC_PER_SEC)
-        
-        DispatchQueue.main.asyncAfter(deadline: popTime) {
-            completion()
         }
     }
 }

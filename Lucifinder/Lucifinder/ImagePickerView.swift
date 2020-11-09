@@ -65,27 +65,14 @@ struct ImagePickerView: View {
                 ImagePicker(image: self.$inputImage)
             }
             .alert(isPresented: $showAlert) {
-                Alert(title: Text("Luciferin Detected!"), message: Text("Luciferin has been detected in the photo!"), dismissButton: .default(Text("Great!")))
+                SwiftSpinner.hide()
+                return Alert(title: Text("Luciferin Detected!"), message: Text("Luciferin has been detected in the photo!"), dismissButton: .default(Text("Great!")))
             }
+            
         }
-    }
-    func processImage() {
-        guard let inputImage = inputImage else { return }
-        let beginImage = CIImage(image: inputImage)
-        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
-        DispatchQueue.main.async {
-            logPixelsOfImage()
-        }
-        SwiftSpinner.show("Processing image...", animated: true)
-        //logPixelsOfImage()
-        DispatchQueue.main.async {
-            SwiftSpinner.hide()
-        }
-        //let imageSaver = ImageSaver()
-        //imageSaver.writeToPhotoAlbum(image: inputImage)
     }
     
-    func logPixelsOfImage() {
+    func processImage() {
         guard let thisImage = inputImage,
               let cgImage = thisImage.cgImage
         else { return }
@@ -111,85 +98,89 @@ struct ImagePickerView: View {
         imageContext.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
         
         let pixels = UnsafeMutableBufferPointer<Pixel>(start: imageData, count: width * height)
-        for y in 0..<height {
-            for x in 0..<width {
-                let index  = y * width + x
-                let pixel = pixels[index]
-                var spectrum:Bool = false
-                if (pixel.green == 255 || pixel.green == 254) {
-                    if (pixel.blue == 0) {
-                        if (pixel.red == 163 || pixel.red == 162 || pixel.red == 164) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 166 || pixel.red == 165 || pixel.red == 167) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 169 || pixel.red == 168 || pixel.red == 170) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 173 || pixel.red == 172 || pixel.red == 174) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 176 || pixel.red == 175 || pixel.red == 177) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 179 || pixel.red == 180 || pixel.red == 178) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 182 || pixel.red == 183 || pixel.red == 181) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 185 || pixel.red == 186 || pixel.red == 184) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 189 || pixel.red == 188 || pixel.red == 190) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 192 || pixel.red == 191 || pixel.red == 193) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 195 || pixel.red == 194 || pixel.red == 196) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 198 || pixel.red == 197 || pixel.red == 199) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 201 || pixel.red == 200 || pixel.red == 202) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 204 || pixel.red == 203 || pixel.red == 205) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 207 || pixel.red == 206 || pixel.red == 208) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 210 || pixel.red == 209 || pixel.red == 211) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 213 || pixel.red == 212 || pixel.red == 214) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 216 || pixel.red == 215 || pixel.red == 217) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 219 || pixel.red == 218 || pixel.red == 220) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 222 || pixel.red == 221 || pixel.red == 223) {
-                            spectrum = true
-                        }
-                        else if (pixel.red == 225 || pixel.red == 224 || pixel.red == 226) {
-                            spectrum = true
+        //background image processing and show SwiftSpinner
+        DispatchQueue.global(qos: .background).async {
+            for y in 0..<height {
+                for x in 0..<width {
+                    let index  = y * width + x
+                    let pixel = pixels[index]
+                    var spectrum:Bool = false
+                    if (pixel.green == 255 || pixel.green == 254) {
+                        if (pixel.blue == 0) {
+                            if (pixel.red == 163 || pixel.red == 162 || pixel.red == 164) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 166 || pixel.red == 165 || pixel.red == 167) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 169 || pixel.red == 168 || pixel.red == 170) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 173 || pixel.red == 172 || pixel.red == 174) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 176 || pixel.red == 175 || pixel.red == 177) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 179 || pixel.red == 180 || pixel.red == 178) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 182 || pixel.red == 183 || pixel.red == 181) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 185 || pixel.red == 186 || pixel.red == 184) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 189 || pixel.red == 188 || pixel.red == 190) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 192 || pixel.red == 191 || pixel.red == 193) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 195 || pixel.red == 194 || pixel.red == 196) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 198 || pixel.red == 197 || pixel.red == 199) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 201 || pixel.red == 200 || pixel.red == 202) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 204 || pixel.red == 203 || pixel.red == 205) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 207 || pixel.red == 206 || pixel.red == 208) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 210 || pixel.red == 209 || pixel.red == 211) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 213 || pixel.red == 212 || pixel.red == 214) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 216 || pixel.red == 215 || pixel.red == 217) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 219 || pixel.red == 218 || pixel.red == 220) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 222 || pixel.red == 221 || pixel.red == 223) {
+                                spectrum = true
+                            }
+                            else if (pixel.red == 225 || pixel.red == 224 || pixel.red == 226) {
+                                spectrum = true
+                            }
                         }
                     }
-                }
-                if (spectrum)
-                {
-                    self.showAlert = true
+                    if (spectrum)
+                    {
+                        self.showAlert = true
+                    }
                 }
             }
         }
-        
+        //show SwiftSpinner during image processing
+        SwiftSpinner.show("Processing image...")
         
         print(Int(width))
         print(Int(height))

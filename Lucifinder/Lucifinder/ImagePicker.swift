@@ -2,7 +2,7 @@
 //  ImagePicker.swift
 //  Lucifinder
 //
-//  Created by Alexandra Spector on 10/24/20.
+//  Created by Jeremy Palavecino on 10/24/20.
 //
 
 import SwiftUI

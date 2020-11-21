@@ -2,78 +2,61 @@
 //  ContentView.swift
 //  Lucifinder
 //
-//  Created by Alexandra Spector on 10/15/20.
+//  Created by Jeremy Palavecino on 11/16/20.
 //
 
 import SwiftUI
 
-struct AppContentView: View {
-    @State var signInSuccess = false
-    var body: some View {
-        return Group {
-            if signInSuccess {
-                //ImagePicker()
-                LuciHome()
-            }
-            else {
-                ContentView(signInSuccess: $signInSuccess)
-            }
-        }
-    }
-}
-
 struct ContentView: View {
-    @State private var userName: String = ""
-    @State private var password: String = ""
-    @State private var showError = false
-    @State private var image: Image?
-    @State private var filterIntensity = 0.5
-    
-    @Binding var signInSuccess: Bool
+    @State private var selection: String? = nil
     
     var body: some View {
-        VStack {
-            LuciBrand()
-            Spacer()
-            VStack{
-                HStack {
-                    Text("Username")
-                        .padding([.leading], 20.0)
-                    TextField("Username", text: $userName)
-                        .padding([.top, .leading, .bottom], 20.0)
-                }
-                HStack {
-                    Text("Password ")
-                        .padding([.leading], 20.0)
-                    SecureField("Password", text: $password)
-                        .padding([.top, .leading, .bottom], 20.0)
-                }
+        LuciBrand()
+        NavigationView {
+            VStack {
+                Spacer()
+                NavigationLink(destination: CaptureImageView(), tag: "takePicture", selection: $selection) { EmptyView() }
+                
+                NavigationLink(destination: ImagePickerView(), tag: "chooseImage", selection: $selection) { EmptyView() }
+                
                 Button(action: {
-                    if(userName == "User") {
-                        if (password == "P@ssw0rd") {
-                            self.signInSuccess = true
-                        }
-                    }
-                    else {
-                        self.showError = true
-                    }
+                    self.selection = "takePicture"
                 }) {
-                Text("Sign In")
+                    HStack {
+                        Image(systemName: "camera")
+                            .font(.title)
+                        Text("Take Photo")
+                    }
                 }
-        
-                if showError {
-                Text("Incorrect username/password").foregroundColor(Color.red)
+                .frame(maxWidth: 145)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.accentColor)
+                .cornerRadius(40)
+                
+                Button(action: {
+                    self.selection = "chooseImage"
+                }) {
+                    HStack {
+                        Image(systemName: "archivebox")
+                            .font(.title)
+                        Text("Choose Photo")
+                    }
                 }
+                .frame(maxWidth: 145)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.accentColor)
+                .cornerRadius(40)
+                Spacer()
             }
-            Spacer()
         }
-            //.frame(maxWidth: .infinity, maxHeight: .infinity)
-            //.background(Image("Brand").resizable())
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+        ContentView()
     }
 }

@@ -15,7 +15,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Spacer()
-                NavigationLink(destination: CaptureImageView(), tag: "takePicture", selection: $selection) { EmptyView() }
+                NavigationLink(destination: ImageTakerView(), tag: "takePicture", selection: $selection) { EmptyView() }
                 
                 NavigationLink(destination: ImagePickerView(), tag: "chooseImage", selection: $selection) { EmptyView() }
                 

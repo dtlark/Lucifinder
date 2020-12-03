@@ -2,7 +2,7 @@
 //  Coordinator.swift
 //  Lucifinder
 //
-//  Created by Alexandra Spector on 10/22/20.
+//  Created by Jeremy Palavecino on 10/22/20.
 //
 
 import SwiftUI

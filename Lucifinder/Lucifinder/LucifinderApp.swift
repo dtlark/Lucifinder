@@ -1,6 +1,6 @@
 //
-//  Lucifinder_v2App.swift
-//  Lucifinder_v2
+//  LucifinderApp.swift
+//  Lucifinder
 //
 //  Created by Jeremy Palavecino on 11/16/20.
 //

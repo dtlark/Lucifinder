@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import Photos
 
 struct ContentView: View {
     @State private var selection: String? = nil
+    @State private var showingReadMe = false
     
     var body: some View {
         LuciBrand()
         NavigationView {
             VStack {
+                Spacer()
                 Spacer()
                 NavigationLink(destination: ImageTakerView(), tag: "takePicture", selection: $selection) { EmptyView() }
                 
@@ -36,6 +39,7 @@ struct ContentView: View {
                 
                 Button(action: {
                     self.selection = "chooseImage"
+                    
                 }) {
                     HStack {
                         Image(systemName: "archivebox")
@@ -49,9 +53,50 @@ struct ContentView: View {
                 .background(Color.accentColor)
                 .cornerRadius(40)
                 Spacer()
+                Button(action: {
+                    self.showingReadMe = true
+                    
+                }) {
+                    HStack {
+                        Image(systemName: "text.justify")
+                            .font(.title)
+                        Text("ReadMe")
+                    }
+                }
+                .frame(maxWidth: 145)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.accentColor)
+                .cornerRadius(40)
+            }
+            .sheet(isPresented: $showingReadMe) {
+                ReadMeView()
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
+    }
+}
+
+func checkPermissions() {
+    print("here")
+    if PHPhotoLibrary.authorizationStatus() != PHAuthorizationStatus.authorized {
+        PHPhotoLibrary.requestAuthorization({ (status: PHAuthorizationStatus) -> Void in ()})
+    }
+    if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
+        
+    }
+    else {
+        PHPhotoLibrary.requestAuthorization(requestAuthorizationHandler)
+    }
+}
+
+func requestAuthorizationHandler(status: PHAuthorizationStatus)
+{
+    if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
+        print("We have access to photos")
+    }
+    else {
+        print("We don't have access")
     }
 }
 

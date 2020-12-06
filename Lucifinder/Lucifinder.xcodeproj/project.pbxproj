@@ -3,100 +3,154 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E735BB2253BAF9A00526002 /* LuciBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E735BB1253BAF9A00526002 /* LuciBrand.swift */; };
-		1E735BB5253BEC4300526002 /* LuciHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E735BB4253BEC4300526002 /* LuciHome.swift */; };
-		1EABA9512542434200B9CDD0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABA9502542434200B9CDD0 /* Coordinator.swift */; };
-		1EB2D39A2544527C008851A2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D3992544527C008851A2 /* ImagePicker.swift */; };
-		1EB2D39D2544620E008851A2 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D39C2544620E008851A2 /* ImagePickerView.swift */; };
-		1EE7C03B25390ADF000C8859 /* LucifinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7C03A25390ADF000C8859 /* LucifinderApp.swift */; };
-		1EE7C03D25390ADF000C8859 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7C03C25390ADF000C8859 /* ContentView.swift */; };
-		1EE7C03F25390AE1000C8859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EE7C03E25390AE1000C8859 /* Assets.xcassets */; };
-		1EE7C04225390AE1000C8859 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EE7C04125390AE1000C8859 /* Preview Assets.xcassets */; };
-		1EF6090225583C2000281C99 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF6090125583C2000281C99 /* SwiftSpinner.swift */; };
+		1E22898B2569C3C2003B8A3A /* LucifinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E22898A2569C3C2003B8A3A /* LucifinderApp.swift */; };
+		1E22898D2569C3C2003B8A3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E22898C2569C3C2003B8A3A /* ContentView.swift */; };
+		1E22898F2569C3C3003B8A3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E22898E2569C3C3003B8A3A /* Assets.xcassets */; };
+		1E2289922569C3C3003B8A3A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E2289912569C3C3003B8A3A /* Preview Assets.xcassets */; };
+		1E22899B2569C440003B8A3A /* CaptureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E22899A2569C440003B8A3A /* CaptureImageView.swift */; };
+		1E22899E2569C478003B8A3A /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E22899D2569C478003B8A3A /* SwiftSpinner.swift */; };
+		1E2289A12569C496003B8A3A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2289A02569C496003B8A3A /* ImagePicker.swift */; };
+		1E2289A42569C4B5003B8A3A /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2289A32569C4B5003B8A3A /* ImagePickerView.swift */; };
+		1E2289A72569C4D3003B8A3A /* LuciBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2289A62569C4D3003B8A3A /* LuciBrand.swift */; };
+		1E2289AC2569C681003B8A3A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2289AB2569C681003B8A3A /* Coordinator.swift */; };
+		1E28D870257B455900E1E1A2 /* opencv-imageProc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E28D86E257B455800E1E1A2 /* opencv-imageProc.cpp */; };
+		1E28D878257BDE2100E1E1A2 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E28D877257BDE2100E1E1A2 /* opencv2.framework */; };
+		1E28D87C257BE51C00E1E1A2 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1E28D87B257BE51C00E1E1A2 /* OpenCVWrapper.mm */; };
+		1E28D881257C5E7200E1E1A2 /* ReadMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E28D880257C5E7100E1E1A2 /* ReadMeView.swift */; };
+		1E9F5EB3257A00CB00444BAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E9F5EB2257A00CB00444BAA /* GoogleService-Info.plist */; };
+		1EDB48542575B7D1009555CE /* ImagePickerCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB48532575B7D1009555CE /* ImagePickerCamera.swift */; };
+		1EDB48572575BBFD009555CE /* ImageTakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB48562575BBFD009555CE /* ImageTakerView.swift */; };
+		4CFDD3A5ACAE7F7F406B8440 /* Pods_Lucifinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80878BA34B7B3AE95D71C109 /* Pods_Lucifinder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E735BB1253BAF9A00526002 /* LuciBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuciBrand.swift; sourceTree = "<group>"; };
-		1E735BB4253BEC4300526002 /* LuciHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuciHome.swift; sourceTree = "<group>"; };
-		1EABA9502542434200B9CDD0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		1EB2D3992544527C008851A2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		1EB2D39C2544620E008851A2 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
-		1EE7C03725390ADF000C8859 /* Lucifinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lucifinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EE7C03A25390ADF000C8859 /* LucifinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LucifinderApp.swift; sourceTree = "<group>"; };
-		1EE7C03C25390ADF000C8859 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1EE7C03E25390AE1000C8859 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1EE7C04125390AE1000C8859 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1EE7C04325390AE1000C8859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1EF6090125583C2000281C99 /* SwiftSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
+		1E2289872569C3C2003B8A3A /* Lucifinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lucifinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E22898A2569C3C2003B8A3A /* LucifinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LucifinderApp.swift; sourceTree = "<group>"; };
+		1E22898C2569C3C2003B8A3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1E22898E2569C3C3003B8A3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E2289912569C3C3003B8A3A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1E2289932569C3C3003B8A3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E22899A2569C440003B8A3A /* CaptureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageView.swift; sourceTree = "<group>"; };
+		1E22899D2569C478003B8A3A /* SwiftSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
+		1E2289A02569C496003B8A3A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1E2289A32569C4B5003B8A3A /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		1E2289A62569C4D3003B8A3A /* LuciBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuciBrand.swift; sourceTree = "<group>"; };
+		1E2289AB2569C681003B8A3A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1E28D86D257B455800E1E1A2 /* Lucifinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lucifinder-Bridging-Header.h"; sourceTree = "<group>"; };
+		1E28D86E257B455800E1E1A2 /* opencv-imageProc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "opencv-imageProc.cpp"; sourceTree = "<group>"; };
+		1E28D86F257B455900E1E1A2 /* opencv-imageProc.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "opencv-imageProc.hpp"; sourceTree = "<group>"; };
+		1E28D877257BDE2100E1E1A2 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		1E28D87A257BE45D00E1E1A2 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		1E28D87B257BE51C00E1E1A2 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		1E28D880257C5E7100E1E1A2 /* ReadMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMeView.swift; sourceTree = "<group>"; };
+		1E9F5EB2257A00CB00444BAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1EDB48532575B7D1009555CE /* ImagePickerCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCamera.swift; sourceTree = "<group>"; };
+		1EDB48562575BBFD009555CE /* ImageTakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTakerView.swift; sourceTree = "<group>"; };
+		325B1F80E5CAF17E9ED05BA0 /* Pods-Lucifinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lucifinder.release.xcconfig"; path = "Target Support Files/Pods-Lucifinder/Pods-Lucifinder.release.xcconfig"; sourceTree = "<group>"; };
+		5B012D85BBCFCCCBE4E0167C /* Pods-Lucifinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lucifinder.debug.xcconfig"; path = "Target Support Files/Pods-Lucifinder/Pods-Lucifinder.debug.xcconfig"; sourceTree = "<group>"; };
+		80878BA34B7B3AE95D71C109 /* Pods_Lucifinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lucifinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1EE7C03425390ADF000C8859 /* Frameworks */ = {
+		1E2289842569C3C2003B8A3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E28D878257BDE2100E1E1A2 /* opencv2.framework in Frameworks */,
+				4CFDD3A5ACAE7F7F406B8440 /* Pods_Lucifinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1EE7C02E25390ADF000C8859 = {
+		1E22897E2569C3C2003B8A3A = {
 			isa = PBXGroup;
 			children = (
-				1EE7C03925390ADF000C8859 /* Lucifinder */,
-				1EE7C03825390ADF000C8859 /* Products */,
+				1E2289892569C3C2003B8A3A /* Lucifinder */,
+				1E2289882569C3C2003B8A3A /* Products */,
+				BA674E89E67F220DE5556DF6 /* Pods */,
+				4119D57757B5DAC937BC8AE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		1EE7C03825390ADF000C8859 /* Products */ = {
+		1E2289882569C3C2003B8A3A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EE7C03725390ADF000C8859 /* Lucifinder.app */,
+				1E2289872569C3C2003B8A3A /* Lucifinder.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1EE7C03925390ADF000C8859 /* Lucifinder */ = {
+		1E2289892569C3C2003B8A3A /* Lucifinder */ = {
 			isa = PBXGroup;
 			children = (
-				1EE7C03A25390ADF000C8859 /* LucifinderApp.swift */,
-				1EE7C03C25390ADF000C8859 /* ContentView.swift */,
-				1E735BB4253BEC4300526002 /* LuciHome.swift */,
-				1EB2D3992544527C008851A2 /* ImagePicker.swift */,
-				1EB2D39C2544620E008851A2 /* ImagePickerView.swift */,
-				1EF6090125583C2000281C99 /* SwiftSpinner.swift */,
-				1EABA9502542434200B9CDD0 /* Coordinator.swift */,
-				1E735BB1253BAF9A00526002 /* LuciBrand.swift */,
-				1EE7C03E25390AE1000C8859 /* Assets.xcassets */,
-				1EE7C04325390AE1000C8859 /* Info.plist */,
-				1EE7C04025390AE1000C8859 /* Preview Content */,
+				1E9F5EB2257A00CB00444BAA /* GoogleService-Info.plist */,
+				1E22898A2569C3C2003B8A3A /* LucifinderApp.swift */,
+				1E22898C2569C3C2003B8A3A /* ContentView.swift */,
+				1E22899A2569C440003B8A3A /* CaptureImageView.swift */,
+				1E2289AB2569C681003B8A3A /* Coordinator.swift */,
+				1E22899D2569C478003B8A3A /* SwiftSpinner.swift */,
+				1E2289A02569C496003B8A3A /* ImagePicker.swift */,
+				1EDB48532575B7D1009555CE /* ImagePickerCamera.swift */,
+				1E2289A32569C4B5003B8A3A /* ImagePickerView.swift */,
+				1EDB48562575BBFD009555CE /* ImageTakerView.swift */,
+				1E28D880257C5E7100E1E1A2 /* ReadMeView.swift */,
+				1E28D86E257B455800E1E1A2 /* opencv-imageProc.cpp */,
+				1E28D87A257BE45D00E1E1A2 /* OpenCVWrapper.h */,
+				1E28D87B257BE51C00E1E1A2 /* OpenCVWrapper.mm */,
+				1E28D86F257B455900E1E1A2 /* opencv-imageProc.hpp */,
+				1E2289A62569C4D3003B8A3A /* LuciBrand.swift */,
+				1E22898E2569C3C3003B8A3A /* Assets.xcassets */,
+				1E2289932569C3C3003B8A3A /* Info.plist */,
+				1E2289902569C3C3003B8A3A /* Preview Content */,
+				1E28D86D257B455800E1E1A2 /* Lucifinder-Bridging-Header.h */,
 			);
 			path = Lucifinder;
 			sourceTree = "<group>";
 		};
-		1EE7C04025390AE1000C8859 /* Preview Content */ = {
+		1E2289902569C3C3003B8A3A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				1EE7C04125390AE1000C8859 /* Preview Assets.xcassets */,
+				1E2289912569C3C3003B8A3A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4119D57757B5DAC937BC8AE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E28D877257BDE2100E1E1A2 /* opencv2.framework */,
+				80878BA34B7B3AE95D71C109 /* Pods_Lucifinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA674E89E67F220DE5556DF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B012D85BBCFCCCBE4E0167C /* Pods-Lucifinder.debug.xcconfig */,
+				325B1F80E5CAF17E9ED05BA0 /* Pods-Lucifinder.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1EE7C03625390ADF000C8859 /* Lucifinder */ = {
+		1E2289862569C3C2003B8A3A /* Lucifinder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EE7C04625390AE1000C8859 /* Build configuration list for PBXNativeTarget "Lucifinder" */;
+			buildConfigurationList = 1E2289962569C3C3003B8A3A /* Build configuration list for PBXNativeTarget "Lucifinder" */;
 			buildPhases = (
-				1EE7C03325390ADF000C8859 /* Sources */,
-				1EE7C03425390ADF000C8859 /* Frameworks */,
-				1EE7C03525390ADF000C8859 /* Resources */,
+				E022FA783FA24DDEBC58A1EF /* [CP] Check Pods Manifest.lock */,
+				1E2289832569C3C2003B8A3A /* Sources */,
+				1E2289842569C3C2003B8A3A /* Frameworks */,
+				1E2289852569C3C2003B8A3A /* Resources */,
+				E3A24468AFA9644E05D2F0DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -104,24 +158,25 @@
 			);
 			name = Lucifinder;
 			productName = Lucifinder;
-			productReference = 1EE7C03725390ADF000C8859 /* Lucifinder.app */;
+			productReference = 1E2289872569C3C2003B8A3A /* Lucifinder.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1EE7C02F25390ADF000C8859 /* Project object */ = {
+		1E22897F2569C3C2003B8A3A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					1EE7C03625390ADF000C8859 = {
+					1E2289862569C3C2003B8A3A = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
-			buildConfigurationList = 1EE7C03225390ADF000C8859 /* Build configuration list for PBXProject "Lucifinder" */;
+			buildConfigurationList = 1E2289822569C3C2003B8A3A /* Build configuration list for PBXProject "Lucifinder" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -129,48 +184,96 @@
 				en,
 				Base,
 			);
-			mainGroup = 1EE7C02E25390ADF000C8859;
-			productRefGroup = 1EE7C03825390ADF000C8859 /* Products */;
+			mainGroup = 1E22897E2569C3C2003B8A3A;
+			productRefGroup = 1E2289882569C3C2003B8A3A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1EE7C03625390ADF000C8859 /* Lucifinder */,
+				1E2289862569C3C2003B8A3A /* Lucifinder */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1EE7C03525390ADF000C8859 /* Resources */ = {
+		1E2289852569C3C2003B8A3A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EE7C04225390AE1000C8859 /* Preview Assets.xcassets in Resources */,
-				1EE7C03F25390AE1000C8859 /* Assets.xcassets in Resources */,
+				1E2289922569C3C3003B8A3A /* Preview Assets.xcassets in Resources */,
+				1E9F5EB3257A00CB00444BAA /* GoogleService-Info.plist in Resources */,
+				1E22898F2569C3C3003B8A3A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E022FA783FA24DDEBC58A1EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lucifinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3A24468AFA9644E05D2F0DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lucifinder/Pods-Lucifinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lucifinder/Pods-Lucifinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lucifinder/Pods-Lucifinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		1EE7C03325390ADF000C8859 /* Sources */ = {
+		1E2289832569C3C2003B8A3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EE7C03D25390ADF000C8859 /* ContentView.swift in Sources */,
-				1EF6090225583C2000281C99 /* SwiftSpinner.swift in Sources */,
-				1EABA9512542434200B9CDD0 /* Coordinator.swift in Sources */,
-				1EB2D39A2544527C008851A2 /* ImagePicker.swift in Sources */,
-				1EB2D39D2544620E008851A2 /* ImagePickerView.swift in Sources */,
-				1E735BB5253BEC4300526002 /* LuciHome.swift in Sources */,
-				1E735BB2253BAF9A00526002 /* LuciBrand.swift in Sources */,
-				1EE7C03B25390ADF000C8859 /* LucifinderApp.swift in Sources */,
+				1EDB48542575B7D1009555CE /* ImagePickerCamera.swift in Sources */,
+				1E2289AC2569C681003B8A3A /* Coordinator.swift in Sources */,
+				1E28D87C257BE51C00E1E1A2 /* OpenCVWrapper.mm in Sources */,
+				1E22898D2569C3C2003B8A3A /* ContentView.swift in Sources */,
+				1E22899E2569C478003B8A3A /* SwiftSpinner.swift in Sources */,
+				1E2289A12569C496003B8A3A /* ImagePicker.swift in Sources */,
+				1E22898B2569C3C2003B8A3A /* LucifinderApp.swift in Sources */,
+				1EDB48572575BBFD009555CE /* ImageTakerView.swift in Sources */,
+				1E28D881257C5E7200E1E1A2 /* ReadMeView.swift in Sources */,
+				1E2289A72569C4D3003B8A3A /* LuciBrand.swift in Sources */,
+				1E2289A42569C4B5003B8A3A /* ImagePickerView.swift in Sources */,
+				1E22899B2569C440003B8A3A /* CaptureImageView.swift in Sources */,
+				1E28D870257B455900E1E1A2 /* opencv-imageProc.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1EE7C04425390AE1000C8859 /* Debug */ = {
+		1E2289942569C3C3003B8A3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -231,7 +334,7 @@
 			};
 			name = Debug;
 		};
-		1EE7C04525390AE1000C8859 /* Release */ = {
+		1E2289952569C3C3003B8A3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -286,15 +389,21 @@
 			};
 			name = Release;
 		};
-		1EE7C04725390AE1000C8859 /* Debug */ = {
+		1E2289972569C3C3003B8A3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B012D85BBCFCCCBE4E0167C /* Pods-Lucifinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Lucifinder/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Z75K4L4F2;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Lucifinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,20 +412,28 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Lucifinder.Lucifinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lucifinder/Lucifinder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		1EE7C04825390AE1000C8859 /* Release */ = {
+		1E2289982569C3C3003B8A3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 325B1F80E5CAF17E9ED05BA0 /* Pods-Lucifinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Lucifinder/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Z75K4L4F2;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Lucifinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,6 +442,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Lucifinder.Lucifinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lucifinder/Lucifinder-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,25 +451,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1EE7C03225390ADF000C8859 /* Build configuration list for PBXProject "Lucifinder" */ = {
+		1E2289822569C3C2003B8A3A /* Build configuration list for PBXProject "Lucifinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1EE7C04425390AE1000C8859 /* Debug */,
-				1EE7C04525390AE1000C8859 /* Release */,
+				1E2289942569C3C3003B8A3A /* Debug */,
+				1E2289952569C3C3003B8A3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EE7C04625390AE1000C8859 /* Build configuration list for PBXNativeTarget "Lucifinder" */ = {
+		1E2289962569C3C3003B8A3A /* Build configuration list for PBXNativeTarget "Lucifinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1EE7C04725390AE1000C8859 /* Debug */,
-				1EE7C04825390AE1000C8859 /* Release */,
+				1E2289972569C3C3003B8A3A /* Debug */,
+				1E2289982569C3C3003B8A3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1EE7C02F25390ADF000C8859 /* Project object */;
+	rootObject = 1E22897F2569C3C2003B8A3A /* Project object */;
 }

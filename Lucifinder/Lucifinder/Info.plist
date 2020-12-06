@@ -47,12 +47,12 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>To capture images for light wavelength analysis</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Access photos from user library for RGB analysis</string>
+	<string>Lucifinder requires access to the camer for image capture</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Save user photos to device</string>
 	<key>UIUserInterfaceStyle</key>
-	<string>UIUserInterfaceStyle = .light</string>
+	<string>Light</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Lucifinder requires access to photos in order to perform image processing</string>
 </dict>
 </plist>

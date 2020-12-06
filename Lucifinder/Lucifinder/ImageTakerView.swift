@@ -12,12 +12,17 @@ import CoreImage.CIFilterBuiltins
 import CoreGraphics
 import UIKit
 import Foundation
+import Photos
+import FirebaseStorage
+import Firebase
 
 import SwiftUI
 
 struct ImageTakerView: View {
     @State private var image: Image?
     @State private var image2: Image?
+    
+    @State private var url: URL?
     
     @State private var selection: String? = nil
     
@@ -27,7 +32,10 @@ struct ImageTakerView: View {
     @State private var outputImage: UIImage?
     
     @State private var showAlert = false
+    @State private var showAlert2 = false
     @State private var luciFound = false
+    @State private var firebase = false
+    @State private var uploaded: Bool?
     
     var labelContainerView: UIView!
     
@@ -40,12 +48,38 @@ struct ImageTakerView: View {
                 ZStack {
                     //if image is selected show image in box
                     if image2 != nil {
-                        GeometryReader { geo in
+                        VStack {
+                            HStack {
+                                Button(action: {
+                                    self.showingImagePicker = true
+                                    image2 = nil
+                                }) {
+                                    HStack {
+                                        Image(systemName: "camera")
+                                            .font(.title)
+                                        Text("Take New Photo")
+                                    }
+                                }
+                                Spacer()
+                                Button(action: {
+                                    uploadToCloud()
+                                    self.showAlert2 = true
+                                    self.showingImagePicker = false
+                                }) {
+                                    HStack {
+                                        Image(systemName: "archivebox")
+                                            .font(.title)
+                                        Text("Save To Firebase")
+                                    }
+                                }
+                            }
+                            GeometryReader { geo in
                             image2?
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: geo.size.width, height: 400, alignment: .top)
                                 //.scaledToFit()
+                            }
                         }
                     }
                     //otherwise prompt user to select an image
@@ -63,8 +97,8 @@ struct ImageTakerView: View {
             .padding([.horizontal, .bottom])
             //Pull up view that shows the user the photo library
             //Once an image is selected, prompt the image processing function - processImage
-            .sheet(isPresented: $showingImagePicker, onDismiss: processImage) {
-                ImagePickerCamera(image: self.$inputImage)
+            .sheet(isPresented: $showingImagePicker, onDismiss: testOpenCV/*processImage*/) {
+                ImagePickerCamera(image: self.$inputImage, url: self.$url)
             }
             //Upon selection of an image, the application will begin processing the image.
             //While the processing is taking place, a temporary view (SwiftSpinner) will
@@ -83,6 +117,112 @@ struct ImageTakerView: View {
                 }
             }
         }
+    }
+    
+    func checkPermissions() {
+        if PHPhotoLibrary.authorizationStatus() != PHAuthorizationStatus.authorized {
+            PHPhotoLibrary.requestAuthorization({ (status: PHAuthorizationStatus) -> Void in ()})
+        }
+        if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
+            
+        }
+        else {
+            PHPhotoLibrary.requestAuthorization(requestAuthorizationHandler)
+        }
+    }
+    
+    func requestAuthorizationHandler(status: PHAuthorizationStatus)
+    {
+        if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
+            print("We have access to photos")
+        }
+        else {
+            print("We don't have access")
+        }
+    }
+    
+    func uploadToCloud() {
+        //print("In upload")
+        self.uploaded = true
+        
+        /*let storage = Storage.storage()
+        
+        let data = Data()
+        
+        let storageRef = storage.reference()
+        
+        guard let localFile = url
+        else { return }
+        
+        let today = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm_E_d_MM_y"
+        let tempstring = formatter.string(from: today)
+        let fileType = ".png"
+        let fileName = tempstring + fileType
+        
+        let photoRef = storageRef.child(fileName)
+        
+        let uploadTask = photoRef.putFile(from: localFile, metadata: nil) { (metadata, err) in
+            guard let metadata = metadata else {
+                print(err?.localizedDescription)
+                print("Photo not uploaded")
+                self.uploaded = false
+                return
+            }
+            self.uploaded = true
+        }*/
+    }
+    
+    func testOpenCV() {
+        //guard let thisImage = inputImage
+        //else { return }
+        //
+        //image2 = Image(uiImage: thisImage)
+        //
+        //let today = Date()
+        //let formatter = DateFormatter()
+        //formatter.dateFormat = "HH:mm_E_d_MM_y"
+        //let tempstring = formatter.string(from: today)
+        //let fileType = ".jpg"
+        //
+        //let docsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        //let fileName = tempstring + fileType
+        //let fileURL = docsDirectory.appendingPathComponent(fileName)
+        //if let data = thisImage.jpegData(compressionQuality: 0.8),!FileManager.default.fileExists(atPath: fileURL.path){
+        //    do {
+        //        try data.write(to: fileURL)
+        //        //print(fileURL.path)
+        //        //print("file written")
+        //        url = fileURL
+        //    } catch {
+        //        print("error writing file:", error)
+        //    }
+        //}
+        guard let thisImage = inputImage
+        else { return }
+        
+        image2 = Image(uiImage: thisImage)
+        
+        DispatchQueue.global(qos: .background).async {
+            let testCV = OpenCVWrapper()
+            //let picTest = testCV.imageProc(url?.path)
+            let picTest = testCV.imageProc2(inputImage)
+            print(picTest)
+            if (picTest == -1 || picTest == 0 || picTest == 1)
+            {
+                if (picTest == 0 || picTest == -1)
+                {
+                    self.luciFound = false
+                }
+                if (picTest == 1)
+                {
+                    self.luciFound = true
+                }
+                self.showAlert = true
+            }
+        }
+        SwiftSpinner.show("Processing image...")
     }
     
     func processImage() {

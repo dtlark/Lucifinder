@@ -1,21 +1,3 @@
-{
-  "images" : [
-    {
-      "filename" : "Brand.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
-    }
-  ],
-  "info" : {
-    "author" : "xcode",
-    "version" : 1
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:88338512196b3681f7efe643593e50eeee61afe562b087daf9db33c7b0e0f89c
+size 324

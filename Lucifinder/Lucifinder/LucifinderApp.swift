@@ -1,33 +1,3 @@
-//
-//  LucifinderApp.swift
-//  Lucifinder
-//
-//  Created by Jeremy Palavecino on 11/16/20.
-//
-
-import SwiftUI
-import Firebase
-
-@main
-struct LucifinderApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
-}
-
-class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        FirebaseApp.configure()
-        return true
-    }
-}
-
-struct LucifinderApp_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:47b55d92f797d9c52a4ab88e3b67a1636aff3c3d30f24a5c4707d33f3bf93df0
+size 794

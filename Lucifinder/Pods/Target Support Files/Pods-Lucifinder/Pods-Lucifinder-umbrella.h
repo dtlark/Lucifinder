@@ -1,16 +1,3 @@
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#else
-#ifndef FOUNDATION_EXPORT
-#if defined(__cplusplus)
-#define FOUNDATION_EXPORT extern "C"
-#else
-#define FOUNDATION_EXPORT extern
-#endif
-#endif
-#endif
-
-
-FOUNDATION_EXPORT double Pods_LucifinderVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_LucifinderVersionString[];
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a9caa9b99cb6ae9cf892493f091b8f171d60cc27981e61ee4304a6efaff0e04
+size 338

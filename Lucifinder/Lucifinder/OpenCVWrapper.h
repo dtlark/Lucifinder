@@ -1,16 +1,3 @@
-//
-//  OpenCVWrapper.h
-//  Lucifinder
-//
-//  Created by Jeremy Palavecino on 12/5/20.
-//
-
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
-@interface OpenCVWrapper : NSObject
-
-- (int) imageProc: (const char*) imageUrl;
-- (int) imageProc2: (UIImage *) image;
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:3366260b635caa95c7026b24e6725c6f0ba1217c3801f1774d4296829f572458
+size 290

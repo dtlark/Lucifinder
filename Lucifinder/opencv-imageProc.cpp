@@ -13,7 +13,7 @@ using namespace std;
 using namespace cv;
 
 vector<int> redSpectrum = {};
-vector<int> greenSpectrum {};
+vector<int> greenSpectrum = {};
 vector<int> blueSpectrum = {};
 
 int highestRed = 0;
@@ -232,6 +232,11 @@ int imageProc2(cv::Mat cvMat, float lower, float upper)
  
     if (image.empty())
     {
+        
+        redSpectrum = {};
+        greenSpectrum =  {};
+        blueSpectrum = {};
+        
         return -1;
     }
     else
@@ -246,7 +251,9 @@ int imageProc2(cv::Mat cvMat, float lower, float upper)
                 uchar blue = pixel[2];
                 uchar alpha = pixel[3];
                 
-                //std::cout << uint(red) << " " << uint(green) << " " << uint(blue) << uint(alpha) endl;
+                
+                
+               // std::cout << uint(red) << " " << uint(green) << " " << uint(blue) << endl;
                 
                 
                 
@@ -256,28 +263,35 @@ int imageProc2(cv::Mat cvMat, float lower, float upper)
                 {
                     for (uint m = 0; m < blueSpectrum.size(); m++) {
                         
-                    //std::cout << "processing green" << endl;
-                    if ((uint)blue == blueSpectrum[m])
-                    {
-                        //std::cout << "processing blue" << endl;
-                        for (uint k = 0; k < redSpectrum.size(); k++)
+                        //std::cout << "processing green" << endl;
+                        if ((uint)blue == blueSpectrum[m])
                         {
-                            //std::cout << "stepping through spectrum" << endl;
-                            if ((uint)red == redSpectrum[k])
+                            //std::cout << "processing blue" << endl;
+                            for (uint k = 0; k < redSpectrum.size(); k++)
                             {
-                                return 1;
+                                //std::cout << "stepping through spectrum" << endl;
+                                if ((uint)red == redSpectrum[k])
+                                {
+                                    redSpectrum = {};
+                                    greenSpectrum = {};
+                                    blueSpectrum = {};
+                                    return 1;
+                                }
                             }
                         }
                     }
-                    }
                 }
-                }
-                
-                
             }
+            
+            
+        }
         }
     }
     
+    
+    redSpectrum = {};
+    greenSpectrum =  {};
+    blueSpectrum = {};
     return 0;
 }
 

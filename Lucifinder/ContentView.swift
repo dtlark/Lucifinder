@@ -27,6 +27,15 @@ struct ContentView: View {
         alert.addTextField {lowerVal in lowerVal.placeholder = "Lower Vale (e.g. 551)"}
         
         alert.addTextField {upperVal in upperVal.placeholder = "Upper Vale (e.g. 570)"}
+
+        
+        
+        let cancelAction = UIAlertAction (title: "Cancel", style: .cancel) { (_) in
+            
+            print("Cancel")
+        }
+        
+        
         
         let setAction = UIAlertAction (title: "Set", style: .default) { (_) in
             print ("Set")
@@ -38,15 +47,10 @@ struct ContentView: View {
             print(String(wavelengths.lowerVal))
             print(String(wavelengths.upperVal))
         }
-        
-        
-        let cancelAction = UIAlertAction (title: "Cancel", style: .cancel) { (_) in
-            
-            print("Cancel")
-        }
-        
-        alert.addAction(setAction)
         alert.addAction(cancelAction)
+        alert.addAction(setAction)
+       
+        alert.preferredAction = setAction
         
         UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {
             

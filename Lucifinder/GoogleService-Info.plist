@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>343938135208-nujnc1cmajrc2dgp00lenp158mbr2f2h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.343938135208-nujnc1cmajrc2dgp00lenp158mbr2f2h</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCTZ6S2NxguILtrjtWq6r4PNRW3dWrHxLg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>343938135208</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.lucrelabs.lucifinder</string>
+	<key>PROJECT_ID</key>
+	<string>lucifinder-df5b1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lucifinder-df5b1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:343938135208:ios:e73cf3d57983a4ee7e3e9d</string>
+</dict>
+</plist>

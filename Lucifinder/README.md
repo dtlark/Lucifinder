@@ -12,7 +12,7 @@ Lucifinder is an application used to detect the presence of luciferin in photos.
 ## Getting Started
 ***
 Getting started is as simple as downloading the application to your device!
-![Screen shot]
+![Home Screen](/Users/AllieSpector/Desktop/Lucifinder/App Home Screen.png)
 
 ## Analyzing Photos
 ***
